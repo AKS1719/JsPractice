@@ -30,6 +30,7 @@
             <li><code>typeof <nameOfVariable></code></li>
             <li><code>typeof (<nameOfVariable>)</code></li>
         </ul>
+        </p>
 
         <h3>Types of datatypes in Js</h3>
         <h4>Primitive</h4>
@@ -56,38 +57,32 @@
         <h3>Type Conversions in Js</h3>
         <p>Example 1
             <code>
-                <ul>
-                    <li>let score = "33"</li>
-                    <li> console.log(typeof score)</li>
-                    <li>let valueInNumber = Number(score)</li>
- <li>console.log(valueInNumber)</li>    
-                <li></ul></li>
-            </code>
+let score = "33"
+console.log(typeof score)
+let valueInNumber = Number(score)
+console.log(valueInNumber)
+</code>
         </p>
         <p>Example 2
             <code>
-                <ul>
-                    <li>let isLoggedIN =  "dsf"</li>
+let isLoggedIN =  "dsf"
 
-                    <li>let  booleanLoggedIn = Boolean(isLoggedIN)</li>
-                    <li>console.log(booleanLoggedIn)</li>    
-                <li></ul></li>
-            </code>
+let  booleanLoggedIn = Boolean(isLoggedIN)
+console.log(booleanLoggedIn)
+</code>
         </p>
         <p>Example 3
             <code>
-                <ul>
-                    <li>let some = 33</li>
-<li>let stringval = String(some)</li>
-<li>console.log(stringval)</li>
-<li>console.log(typeof stringval)</li>   
-                <li></ul></li>
-            </code>
+let some = 33
+let stringval = String(some)
+console.log(stringval)
+console.log(typeof stringval)
+</code>
         </p>
-        <p>Concatination of string 
+        <p>Concatination of string
             <code>
-                let str1 = "akshat"
-                let str2 = " kumar"
-                let str3 = str1+str2
-            </code>    
+let str1 = "akshat"
+let str2 = " kumar"
+let str3 = str1+str2
+</code>
         </p>
