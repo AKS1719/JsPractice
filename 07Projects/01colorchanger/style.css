@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    height:100vh;
+    width: 100vw;
+    background-color:black;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+}
+
+button{
+    height: 100px;
+    width: 100px;
+}
+
+#black{
+    background-color: black;
+}
+#crimson{
+    background-color: crimson;
+}
+#lightseagreen{
+    background-color: lightseagreen;
+}
+
+#red{
+    background-color: red;
+}

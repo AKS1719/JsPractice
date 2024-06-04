@@ -15,8 +15,44 @@
     <div >
         <h1 id="title" class="heading">Dom learning <span style="display: none;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, unde!</span> </h1>
         <p>Lorem ipsum dolor sit amet.</p>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2 class="secondh2">Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+
+        <input type="password" name="" id="">
+
+        <ul>
+            <li class="list-item">1</li>
+            <li class="list-item">2</li>
+            <li class="list-item">3</li>
+            <li class="list-item">4</li>
+        </ul>
     </div>
 </body>
 <script>
+
+    const title = document.getElementById("title")
+    // console.log(title)
+    // console.log(title.id)
+    // console.log(title.className)
+    title.style.backgroundColor = 'green'
+    title.style.padding='15px'
+    title.style.borderRadius = '20px'
+
+    const h2 = document.querySelector('.secondh2')
+    h2.textContent = "bandar"
+
+    // const ul = document.querySelector('ul')
+    // const tmplist = ul.querySelectorAll('li')
+    // tmplist.forEach((ele)=>{
+    //     ele.style.color= 'green'
+    // })
+    const tmplist = document.getElementsByClassName('list-item')
+    
+    // console.log(Array.from(tmplist))
+    const myconvertedArray = Array.from(tmplist);
+    myconvertedArray.forEach((ele)=>{
+        ele.style.fontSize = '40px'
+    })
 </script>
 </html>

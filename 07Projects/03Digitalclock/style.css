@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    color:white;
+    height:100vh;
+    width: 100vw;
+    background-color:black;
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.clock{
+    margin-top: 1rem;
+    background-color: coral;
+    padding: 1rem;
+    width: 300px;;
+    border-radius: 20px;
+}
