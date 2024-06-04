@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family: "Montserrat Alternates", sans-serif;
+        }
+        
+        body{
+            color:white;
+            height:100vh;
+            width: 100vw;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    Value	State	Description <br>
+0	UNSENT	Client has been created. open() not called yet. <br>
+1	OPENED	open() has been called. <br>
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available. <br>
+3	LOADING	Downloading; responseText holds partial data. <br>
+4	DONE	The operation is complete. <br>
+
+<div class="github-profile">
+
+</div>
+</body>
+<script>
+
+    const avatar = document.createElement('img')
+    const follower = document.createElement('h4')
+    follower.innerHTML = "Follower count : "
+    const xhr = new XMLHttpRequest()
+    const requestUrl = 'https://api.github.com/users/AkshatKumarSinha9327'
+    xhr.open('GET',requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState)
+        if(xhr.readyState ===4){
+            const data = JSON.parse(this.responseText);
+            console.log(data)
+            avatar.setAttribute('src',data.avatar_url)
+            follower.innerHTML+=data.followers
+        }
+    }
+    xhr.send()
+    const githubProfile = document.querySelector('.github-profile')
+    githubProfile.appendChild(avatar)
+
+    
+    githubProfile.appendChild(follower)
+</script>
+</html>
