@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat Alternates", sans-serif;
+        }
+
+        body {
+            color: white;
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+        }
+        button{
+            height: 100px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+
+    // function init(){
+    //     let name = "mozilaa"
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     displayName();
+    // }
+    // init()
+
+//  lexical scoping
+    // function outer() {
+    //     let username = "akshat"
+    //     function inner() {
+    //         let secret = "ak"
+    //         console.log("iner" + username)
+    //     }
+    //     console.log(secret)
+    //     function innerTwo(){
+    //         console.log(`inner 2 `+username)
+    //         console.log(secret)
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // outer()
+    // console.log("outer" + username)
+
+    // closure -- memory reference -- goes all lexical scopre related to the functoin
+    function makeFunc(){
+        const name = "mozilla"
+        function displayName(){
+            console.log(name)
+        }
+        return displayName;
+    }
+    const myFunc = makeFunc();
+    myFunc()
+</script>
+
+
+<script>
+    // document.querySelector("#orange").onclick= function () {
+    //     document.body.style.backgroundColor = 'orange'   
+    // }
+    // document.querySelector("#green").onclick= function () {
+    //     document.body.style.backgroundColor = 'green'   
+    // }
+
+    function clickHandler(color){
+        // document.body.style.backgroundColor = `${color}`
+        return function (){
+            document.body.style.backgroundColor = `${color}`
+            
+        }
+    }
+
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+</script>
+
+</html>
